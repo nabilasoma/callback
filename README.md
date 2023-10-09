@@ -1,35 +1,45 @@
 
-#     Javascript Functions
+#     Javascript Array Methods
 
-A JavaScript function is a block of code designed to perform a particular task.Functions are the basic building block of JavaScript. Functions allow us to encapsulate a block of code and reuse it multiple times. Functions make JavaScript code more readable, organized, reusable, and maintainable.
+Array methods are essential tools in programming for manipulating and managing arrays. They simplify tasks like adding, removing, and transforming elements within an array. Some common array methods include push, pop, shift, unshift, map, filter, and reduce. These methods empower developers to efficiently work with arrays, making code more concise and readable.
 
 
-# What is a JavaScript Function?
+# Some Array Methods?
 
-A JavaScript function is a reusable block of code that performs a specific task or set of tasks. Functions allow developers to encapsulate logic, making code more organized, readable, and maintainable. They serve as black boxes that take inputs, process them, and return outputs. Functions are essential for breaking down complex problems into smaller, manageable pieces.
+Array length
+Array toString()
+Array pop()
+Array push()
+Array shift()
+Array unshift()
+Array join()
+Array delete()
+Array concat()
+Array flat()
+Array splice()
+Array slice()
 
-# Function Syntax
-In JavaScript, you can declare a function using the function keyword, followed by the function name, a set of parentheses for parameters, and curly braces for the function body. Here's a basic function declaration:
+# Reversing an Array
+The reverse() method reverses the elements in an array.
            
-           function greet(name) {
-  console.log(`Hello, ${name}!`);
+ const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+fruits.reverse();
 
-};
 
-In this example, greet is the function name, and it takes a parameter name. When called, it logs a greeting message with the provided name.
+#  Numeric Sort
+By default, the sort() function sorts values as strings.
 
-#  Function Types
-JavaScript functions come in various forms, including:
+This works well for strings ("Apple" comes before "Banana").
 
-1.Named Functions: The example above is a named function. They have a specific name and are often defined globally, making them accessible from anywhere in your code.
+However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
 
-2.Anonymous Functions: Anonymous functions, also known as function expressions, don't have a name. They are typically assigned to a variable or used as arguments for other functions. Here's an example:
-            const add = function (a, b) {
-  return a + b;
-};
+Because of this, the sort() method will produce incorrect result when sorting numbers.
 
-add(3, 5);
+You can fix this by providing a compare function:
 
-3.Arrow Functions: Introduced in ECMAScript 6 (ES6), arrow functions provide a more concise syntax for writing functions, especially when they are simple one-liners. Here's an example of an arrow function
-
-4.Immediately Invoked Function Expressions (IIFE): IIFE is a self-invoking anonymous function. It's often used to create a private scope for variables to avoid polluting the global scope. Example:
+const numericArr = [11, 22, 54, 32, 87, 100];
+const result2 = numericArr.sort(function(a, b){
+    return a - b;
+});
+console.log(result2);

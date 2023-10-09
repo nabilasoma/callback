@@ -44,3 +44,11 @@ console.log(arrays);
 const arrSplice = myString.splice(0, 2);
 console.log(arrSplice);
 
+// Array Sort
+
+const numericArr = [11, 22, 54, 32, 87, 100];
+const result2 = numericArr.sort(function(a, b){
+    return a - b;
+});
+console.log(result2);
+
