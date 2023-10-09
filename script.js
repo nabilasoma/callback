@@ -52,3 +52,19 @@ const result2 = numericArr.sort(function(a, b){
 });
 console.log(result2);
 
+
+// Array ForEach Method. We can add all elements by using array foreach method
+
+const myNumber = [22, 47, 88, 78, 96, 100];
+
+
+let mySum = 0;
+
+myNumber.forEach(function(value){
+    mySum = mySum + value;
+    return mySum
+}
+
+)
+console.log(mySum);
+

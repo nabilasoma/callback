@@ -6,17 +6,17 @@ Array methods are essential tools in programming for manipulating and managing a
 
 # Some Array Methods?
 
-Array length
-Array toString()
-Array pop()
-Array push()
-Array shift()
-Array unshift()
-Array join()
-Array delete()
-Array concat()
-Array flat()
-Array splice()
+Array length,
+Array toString(), 
+Array pop(), 
+Array push(),
+Array shift(),
+Array unshift(),
+Array join(),
+Array delete(),
+Array concat(),
+Array flat(),
+Array splice(),
 Array slice()
 
 # Reversing an Array
@@ -43,3 +43,20 @@ const result2 = numericArr.sort(function(a, b){
     return a - b;
 });
 console.log(result2);
+
+
+# JavaScript Array forEach()
+The forEach() method calls a function (a callback function) once for each array element.
+
+const myNumber = [22, 47, 88, 78, 96, 100];
+
+
+let mySum = 0;
+
+myNumber.forEach(function(value){
+    mySum = mySum + value;
+    return mySum
+}
+
+)
+console.log(mySum);
