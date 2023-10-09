@@ -68,3 +68,22 @@ myNumber.forEach(function(value){
 )
 console.log(mySum);
 
+
+// Javascript Callback Functions
+
+function sample(a, b){
+        const c = a + b;
+        const d = a - b;
+        const result =  sum(c, d);
+        return result
+      };
+    
+       function sum(a, b){
+        return a + b;
+       }
+    
+      const result3 = (sample(8, 6));
+      console.log(result3);
+
+
+
